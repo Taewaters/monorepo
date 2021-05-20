@@ -1,0 +1,15 @@
+{
+  "name": "db-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "realm-login": "realm-cli login --private-api-key=\"$(grep ATLAS_PRI_KEY .env | cut -d '=' -f2 | tr -d \"'\")\" --api-key=\"$(grep ATLAS_PUB_KEY .env | cut -d '=' -f2 | tr -d \"'\")\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mongodb-realm-cli": "^1.3.4"
+  }
+}

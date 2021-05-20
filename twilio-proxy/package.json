@@ -1,0 +1,27 @@
+{
+  "name": "dhra-twilio-proxy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-env": "node -r dotenv/config helpers/check-env.js",
+    "reserve-number": "node -r dotenv/config helpers/reserve-number.js $npm_config_phoneSid",
+    "create-env": "node -r dotenv/config helpers/create-environment $npm_config_sid $npm_config_suffix $npm_config_name",
+    "start": "twilio-run --ngrok",
+    "poststart": "node -r dotenv/config helpers/gethostname.js",
+    "deploy": "twilio-run deploy"
+  },
+  "dependencies": {
+    "mongodb": "^3.6.6",
+    "node-fetch": "^2.6.1",
+    "realm-web": "^1.2.1",
+    "twilio": "^3.56"
+  },
+  "devDependencies": {
+    "node-html-parser": "^3.3.0",
+    "twilio-run": "^2.6.0"
+  },
+  "engines": {
+    "node": "10"
+  }
+}

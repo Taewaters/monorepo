@@ -1,0 +1,1 @@
+mongodb://_:<API-KEY>@realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=dhra_runner_phone-oqbcf:<SERVICE_NAME>:api-key
