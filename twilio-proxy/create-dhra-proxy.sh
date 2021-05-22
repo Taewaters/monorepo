@@ -22,5 +22,5 @@ twilio api:proxy:v1:services:phone-numbers:list \
 twilio api:proxy:v1:services:update \
     --sid KS5235eba90241399a186dfa32091ef10a \
     --out-of-session-callback-url https://63fc93a69e92.ngrok.io/out-of-session \
-    --callback-url https://63fc93a69e92.ngrok.io/proxy-callback \
+    --callback-url http://localhost:3000/proxy-callback \
     --intercept-callback-url https://63fc93a69e92.ngrok.io/proxy-intercept
