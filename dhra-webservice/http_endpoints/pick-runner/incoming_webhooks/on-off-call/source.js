@@ -5,7 +5,7 @@ exports = async function(payload, response) {
     // Raw request body (if the client sent one).
     // This is a binary object that can be accessed as a string using .text()
     const body = EJSON.parse(payload.body.text());
-    const onCall = (body.onCall == "ON") ? true : false; 
+    const onCall = (body.onCall.toLowerCase() == "on") ? true : false; 
 
     // You can use 'context' to interact with other Realm features.
     // Accessing a value:
