@@ -39,7 +39,7 @@ exports.handler = async (context, event, callback) => {
     .then(agent => {
       console.log("AG ", agent);
       callback(null, {
-        ttl: 60,
+        ttl: 600,
         mode: 'voice-and-message',
         participantIdentifier: agent.number
       })
