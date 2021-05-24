@@ -1,8 +1,4 @@
-exports = function(arg) {
-  var collection = context.services.get("mongodb-atlas").db("DHRA_PROXY").collection("fieldAgents");
-  var cursor = collection.find({ $or: [{ onCall: true }, { default: true }]}).sort({onCall: -1, lastSession: 1});
-  const runners = cursor.toArray();
-  return runners
+exports = async function(arg){
   /*
     Accessing application's values:
     var x = context.values.get("value_name");
@@ -16,5 +12,7 @@ exports = function(arg) {
 
     Try running in the console below.
   */
-  //return {arg: arg};
+  var collection = context.services.get("mongodb-atlas").db("DHRA_PROXY").collection("fieldAgentSelectionStrategy");
+  var toRun = await collection.findOne({active: true});
+  return toRun.name;
 };

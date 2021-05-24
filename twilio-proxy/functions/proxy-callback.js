@@ -1,4 +1,3 @@
-exports.handler = function(context, event, callback) {
-  // console.log("CALLBACK EVENT:", event);
+exports.handler = async function(context, event, callback) {
   callback(null, "Yo");
 }

@@ -2,6 +2,21 @@
     {
         "name": "findall_oncall_or_default_runner",
         "private": false,
-        "run_as_user_id": "60a835ffce7152f4499d3b2b"
+        "run_as_system": true
+    },
+    {
+        "name": "add_session",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "findone_oncall_or_default_runner",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "get_selection_function_name",
+        "private": false,
+        "run_as_system": true
     }
 ]
