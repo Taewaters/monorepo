@@ -2,7 +2,7 @@
 
 You know what it is.
 
-## How this works (from a runner's & user's perspective)
+## How this will work (from a runner's & user's perspective)
 
 A user places a call or text to the publicly published main number, then the
 code checks to see who is on call. Whoever is on call and hasn't had a new
@@ -14,6 +14,11 @@ text the word "break" and the time their break will be over (in 24hr military
 time) to take themselves off call temporarily (like if you got work or
 something). When their break is over, they'll get a text reminding them that
 they're back on call.
+
+Once a week the schedule will be set. Runners will pick which days they'll be
+on call. If a runner needs to give up a shift they need to convince another
+runner who isn't already on call to text in "takeover" and the number of the
+runner they're covering for.
 
 ## Log bugs
 
