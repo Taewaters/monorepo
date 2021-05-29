@@ -31,11 +31,60 @@ At any moment a runner can take themselves off call by texting the "on break"
 number "off duty". They will recieve a text showing how many people are left
 on call and ask them to confirm that they do want to go off duty.
 
-## What's happening to the burner number?
+### What's happening to the burner number?
 the burner number will be ported over when the minimum viable product described
 above is met, so that number is still going to be the number to call. Also we
 will maintain a test number, so new features can be added and tested with no
 interruption of normal DHRA service.
+
+### Data collection and data security.
+
+After every run the runner can text the proxied user's number "END" (in all caps)
+and their session is over or they can just wait 6hr. Either way when the session
+ends some survey questions regarding what materials (if any) were supplied to
+the user and maybe some other stuff. This could potentially put the user's
+privicy at risk. To mitigate this, here is what we do:
+
+When a user calls in we take thier phone number and mix it with something called
+a "salt" usually these salts are public but in this case we keep it a secret
+even from the database. The salt used will be the same for every call. After
+the number and salt are mixed, we run that combination through a hashing
+algorithm. These are also known as "one-way functions" because its very easy to 
+calculate an output but very hard to take an output and work backwards to
+determine the input.
+
+This will produce a seemingly random ID for every caller with the benefit of it
+being nigh impossible for anyone looking at the data to know who it its.
+
+For example an number like 212-555-0987 is seen by the software as 
+```+12125550987``` a salt like ```AF6rPy3jSKorvkKPWU5V6pVq``` gets mixed with the
+number so it then looks like ```+12125550987AF6rPy3jSKorvkKPWU5V6pVq``` then this
+will be hashed with an algoithm called SHA256 and finally come out looking like: 
+```119bdc0acbd3583f2afa1413456494f76b3f9248278a5ef8a33dfe186619e7ce```.
+
+This pretty random looking number will be produced the same way every time the 
+same caller calls in with the same phone number, so it can function as a unique
+identifier. This way we can log usage stats, and other stuff without sacrificing
+anyone's personal identitfying information.
+
+Once every few months, we will dump out the data we collected and replace the hashed
+IDs from ```119bdc0acbd3583f2afa1413456494f76b3f9248278a5ef8a33dfe186619e7ce``` into
+a psydonym like "Jane Doe" or "Joe Shmoe" and then change the salt we use and start
+the data collection again. This will further protect people's identity and allow us
+to refer to callers like human beings in any analysis we publically publish.
+
+Both the phone number proxying, and the data collection methods are specifically
+designed maintain the highest level of privicy while providing the maximum
+convenience to both user and runner. We want it to be easy to volunteer and easy
+to get help and easy to show potential donor's that we are effective.
+
+Any crypto nerds out there got any better ideas on how to accomplish this, hit us up!
+We're open to suggestion. I was entertaining the idea of taking the hashed output and
+running that through a symetrical encryption algorithm like AES with an IV so that
+only after we decrypt could we even coorelate the same caller's hashed ID's with
+each other, so no data in the db could be reasoned about by a bad-faith actor with
+knowledge of certain user's habits with the intent of exposing the user's ID but
+that seemed like overkill. IDK? Lmk what y'all think.
 
 ## Log bugs and request features
 
