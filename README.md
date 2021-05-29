@@ -2,7 +2,7 @@
 
 You know what it is.
 
-## How this will work (from a runner's & user's perspective)
+## How this phone thing will work (from a runner's & user's perspective)
 
 A user places a call or text to the publicly published main number, then the
 code checks to see who is on call. Whoever is on call and hasn't had a new
@@ -16,13 +16,23 @@ something). When their break is over, they'll get a text reminding them that
 they're back on call.
 
 Once a week the schedule will be set. Runners will pick which days they'll be
-on call. If a runner needs to give up a shift they need to convince another
-runner who isn't already on call to text in "takeover" and the number of the
-runner they're covering for.
+on call. When the day comes, the runner's phone will automatically be put "on
+call". Before this happens, the runner will be sent a text reminding them.
 
-## Log bugs
+At any moment a runner can take themselves off call by texting the "on break"
+number "off duty". They will recieve a text showing how many people are left
+on call and ask them to confirm that they do want to go off duty.
 
-Go [here](https://github.com/DallasHRA/monorepo/issues) to log bugs.
+## What's happening to the burner number?
+the burner number will be ported over when the minimum viable product described
+above is met, so that number is still going to be the number to call. Also we
+will maintain a test number, so new features can be added and tested with no
+interruption of normal DHRA service.
+
+## Log bugs and request features
+
+Go [here](https://github.com/DallasHRA/monorepo/issues) to log bugs and request
+new features.
 
 ## Coming Features
 
@@ -31,5 +41,13 @@ Go [here](https://github.com/DallasHRA/monorepo/issues) to log bugs.
 * RONA (Routed On No Answer)
 * Report a bad date line
 * ASR (Automatic Speech Recognition)
+* 5 digit Mass SMS number to warn about bad batches
+* 5 digit Mass SMS number to warn about bad dates
+
+## How to contribute
+
+Fork the motherfucking repo, make improvements, make a goddamned pull request.
+You know the drill. Get off yer butts and write some shit.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
