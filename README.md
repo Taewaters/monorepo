@@ -106,11 +106,12 @@ new features.
 Firstly, I'm flattered, but sorry ladies, gentlemen, and those betwixt, **I'm** spoken for.
 But this **system** and its **code** are not! As we write this, we are also writing scripts to 
 automate its deployment for any other harm reduction org or any activist org who needs
-a hotline with privicy in mind but lacks infrastructure. At a hundreds of calls per month
-call volume, the cost should be no more than the serivce cost of a pre-paid burner. Over 
-that the cost is still reasonable. I in no way endorse the platforms used for any reason
-other than their price. All capitalist enterprises must die, but also until we take back
-the telecom industry, here we is.
+a hotline with privicy in mind but lacks infrastructure or techie know-how.
+
+At a hundreds of calls per month volume, the cost should be no more than the serivce cost
+of a pre-paid burner. Over that the cost is still reasonable. I in no way endorse the 
+platforms used for any reason other than their price. All capitalist enterprises must die,
+but also until we take back the telecom industry, here we is.
 
 PS anyone willing to forcibly take the telecom industry and distribute its productive
 means to the people please email admin@threearrowscommunication.com (I hear those dudes
