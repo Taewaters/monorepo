@@ -101,8 +101,7 @@ new features.
 * 5 digit Mass SMS number to warn about bad batches
 * 5 digit Mass SMS number to warn about bad dates
 
-## What if I don't live in Dallas and I run a harm reduction org and think this
-programmer guy is both handsom and has a brilliant idea.
+## What if I don't live in Dallas, run a harm reduction org, and think this programmer guy is both handsome with a brilliant idea.
 
 Firstly, I'm flattered, but sorry ladies, gentlemen, and those betwixt, **I'm** spoken for.
 But this **system** and its **code** are not! As we write this, we are also writing scripts to 
