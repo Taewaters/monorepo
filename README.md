@@ -9,6 +9,14 @@ code checks to see who is on call. Whoever is on call and hasn't had a new
 user call in for the longest gets the call or text. If no one is on call, the
 call or text goes to the default runner, they're like backup.
 
+The number that the runner sees the user calling from will not actually be the
+user's number but a "proxy" number. As long as someone has some exchange (text
+or call) every 6 hours both the user and runner will be able to contact each
+other using the main line (if you're a user) or the "proxy" number if you're a
+runner. No one should be able to know the other's actual number. Think like how
+Uber or craigslist lets you call without knowing the reall cell number; same
+thing basically.
+
 There is a number runners can text to put themselves on a break. The runner can
 text the word "break" and the time their break will be over (in 24hr military
 time) to take themselves off call temporarily (like if you got work or
