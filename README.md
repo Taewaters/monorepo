@@ -100,6 +100,7 @@ new features.
 * ASR (Automatic Speech Recognition)
 * 5 digit Mass SMS number to warn about bad batches
 * 5 digit Mass SMS number to warn about bad dates
+* Instagram/Facebook/Social media integration
 
 ## What if I don't live in Dallas, run a harm reduction org, and think this programmer guy is both handsome with a brilliant idea.
 
