@@ -1,0 +1,6 @@
+{
+    "name": "google-sheets-updater",
+    "type": "http",
+    "config": {},
+    "version": 1
+}
