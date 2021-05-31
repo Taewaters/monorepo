@@ -10,8 +10,7 @@ exports.handler = async function (context, event, callback) {
   const resp = await axios
     .post(`${API_BASE_URL}service/pick-runner/incoming_webhook/on-off-call`,
       { "api-key": REALM_API_KEY, onCall: event.Body, number: event.From })
-    .then(resp => resp.data)
-    .then(data => ((data.isOnCall) ? "You are now on call." : "You are no longer on call."))
+    .then(resp => {console.log(resp); return resp.data.msg;})
     .then(msg => {
       twiml.message(msg)
       callback(null, twiml);
