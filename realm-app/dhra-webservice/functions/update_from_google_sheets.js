@@ -1,4 +1,4 @@
-exports = function(arg) {
+exports = async function(arg) {
   const data = arg.data;
   const runnerId = arg.fullRow[arg.header.indexOf('_id')];
   const key = arg.header[arg.column - 1];
@@ -12,10 +12,7 @@ exports = function(arg) {
   let update = { $set: {} }
   update['$set'][key] = value
 
-  const result = (await collection.update(
-    {$eq:{"_id": runnerId},
-    update
-  }));
+  const result = (await collection.updateOne({"_id": BSON.ObjectId(runnerId)}, update));
 
 
   console.log(JSON.stringify(result))
